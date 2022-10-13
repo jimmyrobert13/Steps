@@ -1,8 +1,12 @@
 @import "rsuite/dist/rsuite.css";
 
-* {
-  background-color: #050e15;
+.App {
+  background: #050e15;
+  /* text-align: center; */
+  min-height: 100vh;
+  height: 100%;
 }
+
 /* .App {
   text-align: center;
 }
