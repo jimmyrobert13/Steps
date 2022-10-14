@@ -11,18 +11,11 @@ const StepThree = () => {
   };
 
   const changeValue = (e, ix, arr) => {
-    console.log("gg e", e.target.value);
-    console.log("gg ix", ix);
-
     const { name, value } = e.target;
     let values = [...distribution];
-    // arr ? (values[ix][name] = [...value]) : (
     values[ix][name] = value;
-    // );
     setDistribution((state) => [...values]);
   };
-
-  console.log("gg", distribution);
 
   return (
     <div>

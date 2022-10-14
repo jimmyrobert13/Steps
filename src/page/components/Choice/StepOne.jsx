@@ -1,11 +1,14 @@
-import TextField from "@mui/material/TextField";
 import * as S from "./Steps.styles";
 
-const StepOne = () => {
+const StepOne = (props) => {
   return (
     <>
       <S.Title>Token Name</S.Title>
-      <S.InputToken id="token" fullWidth />
+      <S.InputToken
+        id="token"
+        fullWidth
+        onChange={(e) => props.callback(e.target.value)}
+      />
     </>
   );
 };
