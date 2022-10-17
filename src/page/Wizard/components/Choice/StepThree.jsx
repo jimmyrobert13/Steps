@@ -1,6 +1,7 @@
 import TextField from "@mui/material/TextField";
 import * as S from "./Steps.styles";
 import { useState } from "react";
+import { setGlobalState } from "../../../../components/State/index.jsx";
 
 const StepThree = () => {
   const initial = { NAME: "", AMOUNT: "" };
@@ -15,6 +16,7 @@ const StepThree = () => {
     let values = [...distribution];
     values[ix][name] = value;
     setDistribution((state) => [...values]);
+    setGlobalState("step3", [...values]);
   };
 
   return (

@@ -13,7 +13,7 @@
 //   Frame3,
 // } from "../../../assets/index";
 
-import * as I from "../../../assets/index";
+import * as I from "../../../../assets/index";
 
 const imageChoice = (props) => {
   switch (props.id) {

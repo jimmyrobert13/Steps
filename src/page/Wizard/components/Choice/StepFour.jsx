@@ -2,6 +2,7 @@ import * as S from "./Steps.styles";
 import Checkbox from "@mui/material/Checkbox";
 import SwitchImage from "./SwitchImage";
 import { useState } from "react";
+import { setGlobalState } from "../../../../components/State/index.jsx";
 
 const StepFour = () => {
   const [clickChain, setClickChain] = useState([]);
@@ -11,6 +12,7 @@ const StepFour = () => {
     status === true && setClickChain([...clickChain, id]);
     status === false && setClickChain(clickChain.filter((e) => e !== id));
   };
+  setGlobalState("step4", clickChain);
 
   return (
     <>

@@ -1,12 +1,14 @@
 import { Steps, Panel, Placeholder } from "rsuite";
 import { useState } from "react";
 import * as S from "./Steps.styles";
+import { setGlobalState } from "../State";
 
 const StepsComponent = (props) => {
   const [step, setStep] = useState(0);
 
   const onChange = (nextStep) => {
-    setStep(nextStep < 0 ? 0 : nextStep > 4 ? 4 : nextStep);
+    setStep(nextStep < 0 ? 0 : nextStep > 4 ? 3 : nextStep);
+    nextStep == 4 && setGlobalState("information", true);
   };
 
   const onNext = () => onChange(step + 1);

@@ -1,10 +1,8 @@
 import Box from "@mui/material/Box";
-import Steps from "../components/Steps/Steps";
+import Steps from "../../components/Steps/Steps";
 import Switch from "./components/Switch/Switch";
-import { useState } from "react";
 
 const Wizard = () => {
-  const [data, setData] = useState([]);
   const menssagen = [
     {
       step: 0,
@@ -26,17 +24,7 @@ const Wizard = () => {
 
   return (
     <Box sx={{ width: "50%", margin: "auto", paddingTop: "10%" }}>
-      <Steps
-        choice={(e) => (
-          <Switch
-            step={e}
-            drainData={(el) => {
-              setData(el);
-            }}
-          />
-        )}
-        menssagen={menssagen}
-      />
+      <Steps choice={(e) => <Switch step={e} />} menssagen={menssagen} />
     </Box>
   );
 };
