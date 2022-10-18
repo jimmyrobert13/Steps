@@ -16,7 +16,7 @@ const StepThree = () => {
     let values = [...distribution];
     values[ix][name] = value;
     setDistribution((state) => [...values]);
-    setGlobalState("step3", [...values]);
+    setGlobalState("step3", [{ NAME: "NAME", AMOUNT: "AMOUNT" }, ...values]);
   };
 
   return (
@@ -41,6 +41,7 @@ const StepThree = () => {
             <S.TitleDistribution>Amount</S.TitleDistribution>
             <S.InputToken
               name="AMOUNT"
+              type={"number"}
               fullWidth
               marginTop={"30px"}
               value={distribution[ind].AMOUNT}

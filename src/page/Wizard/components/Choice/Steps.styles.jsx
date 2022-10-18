@@ -16,6 +16,9 @@ export const InputToken = Styled(TextField)`
     color: #fff !important;
 
   }
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 8px 14px !important
+  }
 `;
 
 export const Title = Styled.h1`

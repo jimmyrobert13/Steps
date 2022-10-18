@@ -23,7 +23,7 @@ const Wizard = () => {
   ];
 
   return (
-    <Box sx={{ width: "50%", margin: "auto", paddingTop: "10%" }}>
+    <Box sx={{ width: "50%", margin: "auto", paddingTop: "15%" }}>
       <Steps choice={(e) => <Switch step={e} />} menssagen={menssagen} />
     </Box>
   );

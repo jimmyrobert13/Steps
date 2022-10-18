@@ -1,4 +1,6 @@
 import Styled from "styled-components";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 export const Title = Styled.h1`
   display: flex;
@@ -44,4 +46,44 @@ export const Container = Styled.div`
   padding: 10px 0 0 10px;
   height: 44px;
   color: white;
+`;
+
+export const ContainerImg = Styled.div`
+  width: 70%;
+  background: #0A131A;
+  border-radius: 20px;
+  padding: 10px 0 0 10px;
+  /* height: 44px; */
+  color: white;
+`;
+
+export const ContainerChart = Styled.div`
+  width: 70%;
+  background: #0A131A;
+  border-radius: 20px;
+  padding: 10px 0 0 10px;
+  height: 300px;
+  color: white;
+`;
+
+export const StackGrup = Styled(Stack)`
+  justify-content : flex-end;
+`;
+
+export const ButtonSuit = Styled(Button)`
+  background-color: transparent !important;
+  color: white !important;
+  &.Mui-disabled {
+    color: transparent !important;
+  }
+`;
+
+export const RowsButtom = Styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-items: center;
+  margin-top: 20px;
+  padding-bottom: 30px;
+  justify-content: flex-end;
 `;
