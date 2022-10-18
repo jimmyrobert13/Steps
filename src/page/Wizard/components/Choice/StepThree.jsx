@@ -1,6 +1,7 @@
 import TextField from "@mui/material/TextField";
 import * as S from "./Steps.styles";
 import { useState } from "react";
+import { setGlobalState } from "../../../../components/State/index.jsx";
 
 const StepThree = () => {
   const initial = { NAME: "", AMOUNT: "" };
@@ -11,18 +12,12 @@ const StepThree = () => {
   };
 
   const changeValue = (e, ix, arr) => {
-    console.log("gg e", e.target.value);
-    console.log("gg ix", ix);
-
     const { name, value } = e.target;
     let values = [...distribution];
-    // arr ? (values[ix][name] = [...value]) : (
     values[ix][name] = value;
-    // );
     setDistribution((state) => [...values]);
+    setGlobalState("step3", [{ NAME: "NAME", AMOUNT: "AMOUNT" }, ...values]);
   };
-
-  console.log("gg", distribution);
 
   return (
     <div>
@@ -46,6 +41,7 @@ const StepThree = () => {
             <S.TitleDistribution>Amount</S.TitleDistribution>
             <S.InputToken
               name="AMOUNT"
+              type={"number"}
               fullWidth
               marginTop={"30px"}
               value={distribution[ind].AMOUNT}
