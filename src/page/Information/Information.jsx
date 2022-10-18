@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box";
 import { useGlobalState } from "../../components/State/index";
 import * as S from "./Information.styles";
-import { PieChart, Pie } from "recharts";
 import { Chart } from "react-google-charts";
 import SwitchImage from "../../page/Wizard/components/Choice/SwitchImage";
 import Checkbox from "@mui/material/Checkbox";
@@ -11,8 +10,8 @@ const Information = () => {
   const Verification2 = useGlobalState("step2");
   const Verification3 = useGlobalState("step3");
   const Verification4 = useGlobalState("step4");
-  console.log("gg", Verification4);
-  const fre = Verification3[0]?.map((val) => {
+
+  const dataChart = Verification3[0]?.map((val) => {
     return [
       val.NAME,
       val.AMOUNT === "AMOUNT" ? val.AMOUNT : parseInt(val.AMOUNT),
@@ -42,7 +41,7 @@ const Information = () => {
               width={"100%"}
               height={"90%"}
               chartType="PieChart"
-              data={fre}
+              data={dataChart}
               options={{
                 backgroundColor: "transparent",
                 borderRadius: "20px",
