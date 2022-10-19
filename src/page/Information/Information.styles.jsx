@@ -1,6 +1,7 @@
 import Styled from "styled-components";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
 
 export const Title = Styled.h1`
   display: flex;
@@ -86,4 +87,22 @@ export const RowsButtom = Styled.div`
   margin-top: 20px;
   padding-bottom: 30px;
   justify-content: flex-end;
+`;
+
+export const InputToken = Styled(TextField)`
+  height: 44px !important;
+  background: #0A131A;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px !important;
+  box-sizing: border-box;
+  width: 70% !important;
+  .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
+    border-radius: 20px !important;
+    height: 44px !important;
+    color: #fff !important;
+
+  }
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 8px 14px !important
+  }
 `;

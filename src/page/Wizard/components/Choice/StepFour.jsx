@@ -17,15 +17,7 @@ const StepFour = () => {
   return (
     <>
       <S.Title>Select Chain</S.Title>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          flexDirection: "row",
-          justifyContent: "space-around",
-          paddingTop: "20px",
-        }}
-      >
+      <S.GrupCheck>
         {imageArray?.map((val) => (
           <Checkbox
             style={{ marginLeft: "5%" }}
@@ -34,7 +26,7 @@ const StepFour = () => {
             checkedIcon={<SwitchImage id={val} check={true} />}
           />
         ))}
-      </div>
+      </S.GrupCheck>
     </>
   );
 };

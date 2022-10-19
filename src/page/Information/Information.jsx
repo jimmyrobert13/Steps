@@ -24,7 +24,8 @@ const Information = () => {
         <S.Title>Token Resume</S.Title>
         <S.Rows>
           <S.SubTitle>Template:</S.SubTitle>
-          <S.Container>{"----"}</S.Container>
+          {/* <S.Container>{"----"}</S.Container> */}
+          <S.InputToken id="token" fullWidth />
         </S.Rows>
         <S.Rows>
           <S.SubTitle>Name:</S.SubTitle>
